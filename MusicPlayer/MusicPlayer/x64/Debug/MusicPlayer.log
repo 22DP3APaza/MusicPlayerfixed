@@ -1,1 +1,3 @@
-﻿  MusicPlayer.vcxproj -> C:\Users\Rodrigo\source\repos\MusicPlayer\x64\Debug\MusicPlayer.exe
+﻿  MusicPlayer.cpp
+C:\Users\Rodrigo\source\repos\MusicPlayer\MusicPlayer\MusicPlayer.cpp(59,82): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  MusicPlayer.vcxproj -> C:\Users\Rodrigo\source\repos\MusicPlayer\x64\Debug\MusicPlayer.exe
