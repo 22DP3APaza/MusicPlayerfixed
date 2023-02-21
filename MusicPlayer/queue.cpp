@@ -1,51 +1,43 @@
-
 #include <iostream>
-class Queue
-{
-private:
-    int front; //shows first number or string in queue
-    int back; //shows last number or string in queue
-    int max; //max elements in queue
-    int* array; //array
-public:
+#include <string>
 
-    Queue(int m) //sets a parameter for max elements in a queue
-    {
+class Queue {
+private:
+    int front;
+    int back;
+    int max;
+    std::string* array;
+public:
+    Queue(int m) {
         front = back = -1;
         max = m;
-        array = new int[m];
-
+        array = new std::string[m];
     }
-
-    void add(int x) //adds new element to queue back
-    {
-        if (back == max - 1)
-        {
+    void add(std::string x) {
+        if (back == max - 1) {
             std::cout << "Queue is full" << std::endl;
             return;
         }
         array[++back] = x;
     }
-    int remove() //removes first element in queue
-    {
-        if (front == back)
-        {
-            std::cout << "its already empty" << std::endl;
-            return -1;
+    std::string remove() {
+        if (front == back) {
+            std::cout << "Queue is empty" << std::endl;
+            return "";
         }
         return array[++front];
     }
-    int last() //shows last element in a queue
-    {
+    std::string last() {
         return array[back];
     }
-    int size() //shows how many elements queue has
-    {
+    int size() {
         return back - front;
     }
-    int start() //shows first element in queue
-    {
-
+    std::string start() {
         return array[front + 1];
     }
+    // Public accessor functions
+    int getFront() const { return front; }
+    int getBack() const { return back; }
+    std::string* getArray() const { return array; }
 };
