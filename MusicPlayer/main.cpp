@@ -16,7 +16,7 @@ int main()
 
     bool isPaused = false;
     bool isStopped = false;
-
+    std::cout << "Press 'p' to pause/unpause the music, 's' to stop the music, 'n' to play the next song, 'l' to list the songs in the queue: ";
     while (!isStopped)
     {
         if (music.getStatus() == sf::Music::Stopped)
@@ -33,7 +33,7 @@ int main()
             }
         }
 
-        std::cout << "Press 'p' to pause/unpause the music, 's' to stop the music, 'n' to play the next song, 'l' to list the songs in the queue: ";
+        
         char c = getchar();
         if (c == '\n')
             continue;
